@@ -8,8 +8,12 @@ namespace Sweepstake_project
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
+            Contestant contestant = new Contestant();
+            Sweepstakes sweepstakes = new Sweepstakes();
+            sweepstakes.RegisterConstestant(contestant);
         }
     }
 }
