@@ -8,9 +8,10 @@ namespace Sweepstake_project
 {
     public static class SweepstakeManagerFactory
     {
-        public static ISweepstakesManager ChooseManager(string input)
+        public static ISweepstakesManager ChooseManager()
         {
             ISweepstakesManager choice;
+            string input = (UserInterface.PickSweepstakeManager());
             switch (input)
             {
                 case "1":
@@ -20,7 +21,7 @@ namespace Sweepstake_project
                     choice = new SweepstakesQueueManager();
                     return choice;
                 default:
-                    throw new ApplicationException("Invalid choice");                    
+                    throw new ApplicationException("Invalid choice");
             }
         }
     }

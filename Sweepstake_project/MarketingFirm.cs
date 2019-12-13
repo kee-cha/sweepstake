@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Sweepstake_project
 {
-    class MarketingFirm
+    public class MarketingFirm
     {
-
+        ISweepstakesManager manager;
+        public MarketingFirm(ISweepstakesManager manager)
+        {
+            this.manager = manager;
+        }
     }
 }

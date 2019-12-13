@@ -28,8 +28,7 @@ namespace Sweepstake_project
         {
             Contestant contestant;
             Random random = new Random();
-            int winner = random.Next(dictionaryOfContestants.Count) + 1; //found key from dictionary
-            contestant = dictionaryOfContestants[winner]; // find value pair to key with []
+            contestant = dictionaryOfContestants[(random.Next(dictionaryOfContestants.Count + 1))]; 
             return contestant.FirstName + " " + contestant.LastName;
         }
 

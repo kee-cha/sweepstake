@@ -11,10 +11,6 @@ namespace Sweepstake_project
         static void Main(string[] args)
         {
             Sweepstakes sweepstakes = new Sweepstakes(UserInterface.GetSweepstakeName());
-            Contestant contestant = new Contestant();            
-            sweepstakes.RegisterConstestant(contestant);
-            sweepstakes.PickWinner();
-            sweepstakes.PrintContestantInfo(contestant);
         }
     }
 }
