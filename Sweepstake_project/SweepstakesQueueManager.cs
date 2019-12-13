@@ -8,16 +8,18 @@ namespace Sweepstake_project
 {
     class SweepstakesQueueManager: ISweepstakesManager
     {
-        Queue<string> queue = new Queue<string>();
+        Queue<Sweepstakes> queue = new Queue<Sweepstakes>();
+        Sweepstakes sweepstakes;
 
         public Sweepstakes GetSweepstakes()
         {
-            throw new NotImplementedException();
+            sweepstakes = queue.Dequeue();
+            return sweepstakes;
         }
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            throw new NotImplementedException();
+            queue.Enqueue(sweepstakes);
         }
     }
 }

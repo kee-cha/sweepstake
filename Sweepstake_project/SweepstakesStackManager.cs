@@ -8,12 +8,12 @@ namespace Sweepstake_project
 {
     class SweepstakesStackManager: ISweepstakesManager
     {
-        Sweepstakes sweepstakes = new Sweepstakes(name);
+        Sweepstakes sweepstakes;
         Stack<Sweepstakes> stack = new Stack<Sweepstakes>();
 
         public Sweepstakes GetSweepstakes()
         {
-            Sweepstakes sweepstakes = stack.Pop();
+            sweepstakes = stack.Pop();
             return sweepstakes;
         }
 

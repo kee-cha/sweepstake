@@ -10,19 +10,22 @@ namespace Sweepstake_project
     {
         public static string GetContestantFirstName()
         {
-            Console.WriteLine("Please enter your firstname.");
-            return Console.ReadLine().ToLower();
+            Console.WriteLine("Please enter firstname.");
+            Console.Clear();
+            return Console.ReadLine().ToLower();            
         }
 
         public static string GetContestantLastName()
         {
-            Console.WriteLine("Please enter your lastname.");
-            return Console.ReadLine().ToLower();
+            Console.WriteLine("Please enter lastname.");
+            Console.Clear();
+            return Console.ReadLine().ToLower();            
         }
 
         public static string GetContestantEmail()
         {
-            Console.WriteLine("Please enter your email address.");
+            Console.WriteLine("Please enter email address.");
+            Console.Clear();
             return Console.ReadLine().ToLower();
         }
 
@@ -30,9 +33,24 @@ namespace Sweepstake_project
         {
             Console.WriteLine("Firstname: " + contestant.FirstName + "\n" +
               "Lastname: " + contestant.LastName + "\n" +
-              "Email address: " +contestant.Email + "\n" +
+              "Email address: " + contestant.Email + "\n" +
               "Registration Number: " + contestant.registrationNum);
+            Console.Clear();
             return Console.ReadLine();
+        }
+
+        public static string GetSweepstakeName()
+        {
+            Console.WriteLine("Enter name of sweepstake");
+            Console.Clear();
+            return Console.ReadLine();
+        }
+        public static string PickSweepstakeManager()
+        {
+            Console.WriteLine("Choose between 1- stack manager or 2- queue manager");
+            string input = Console.ReadLine();
+            Console.Clear();
+            return input;
         }
     }
 }

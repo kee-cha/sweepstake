@@ -8,18 +8,18 @@ namespace Sweepstake_project
 {
     public class Sweepstakes
     {
-
+        
+        string name;
         Dictionary<int, Contestant> dictionaryOfContestants;
 
         public Sweepstakes(string name)
         {
-
+            this.name = name;
             dictionaryOfContestants = new Dictionary<int, Contestant>();
         }
 
-        public void RegisterConstestant(Contestant contestant)
+        public void RegisterConstestant( Contestant contestant)
         {
-            contestant = new Contestant();
             contestant.registrationNum = dictionaryOfContestants.Count + 1;
             dictionaryOfContestants.Add(contestant.registrationNum, contestant);
         }
@@ -34,7 +34,7 @@ namespace Sweepstake_project
         }
 
         public void PrintContestantInfo(Contestant contestant)
-        {
+        {   
             UserInterface.DisplayWinner(contestant);
         }
     }
