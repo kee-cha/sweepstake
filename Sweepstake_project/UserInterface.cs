@@ -8,7 +8,6 @@ namespace Sweepstake_project
 {
     public static class UserInterface
     {
-
         public static string GetContestantFirstName()
         {
             Console.WriteLine("Please enter your firstname.");
@@ -19,7 +18,6 @@ namespace Sweepstake_project
         {
             Console.WriteLine("Please enter your lastname.");
             return Console.ReadLine().ToLower();
-
         }
 
         public static string GetContestantEmail()
@@ -28,10 +26,13 @@ namespace Sweepstake_project
             return Console.ReadLine().ToLower();
         }
 
-        //public static int GetRegistrationNumber()
-        //{  
-
-        //}
-
-}
+        public static string DisplayWinner(Contestant contestant)
+        {
+            Console.WriteLine("Firstname: " + contestant.FirstName + "\n" +
+              "Lastname: " + contestant.LastName + "\n" +
+              "Email address: " +contestant.Email + "\n" +
+              "Registration Number: " + contestant.registrationNum);
+            return Console.ReadLine();
+        }
+    }
 }

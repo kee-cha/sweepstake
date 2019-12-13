@@ -8,5 +8,6 @@ namespace Sweepstake_project
 {
     class SweepstakeManagerFactory
     {
+
     }
 }

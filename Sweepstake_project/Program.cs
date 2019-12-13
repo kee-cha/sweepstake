@@ -8,12 +8,15 @@ namespace Sweepstake_project
 {
     class Program
     {
-        
+        private static Contestant contestant;
+
         static void Main(string[] args)
         {
-            Contestant contestant = new Contestant();
-            Sweepstakes sweepstakes = new Sweepstakes();
+            
+            Sweepstakes sweepstakes = new Sweepstakes("k");
             sweepstakes.RegisterConstestant(contestant);
+            sweepstakes.PickWinner();
+            sweepstakes.PrintContestantInfo(contestant);
         }
     }
 }
