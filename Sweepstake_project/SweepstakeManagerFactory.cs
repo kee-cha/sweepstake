@@ -21,7 +21,7 @@ namespace Sweepstake_project
                     choice = new SweepstakesQueueManager();
                     return choice;
                 default:
-                    throw new ApplicationException("Invalid choice");
+                    throw new ApplicationException("Invalid choice");                    
             }
         }
     }
